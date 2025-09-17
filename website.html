@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python for Beginners | Learn Python Programming</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        .highlight {
+            background-color: rgba(251, 191, 36, 0.1);
+            border-left: 4px solid rgb(251, 191, 36);
+            padding-left: 1rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="code" class="text-blue-600 h-8 w-8"></i>
+                        <span class="ml-2 text-xl font-bold text-gray-900">PyLearn</span>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#" class="border-blue-500 text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
+                    <a href="#lessons" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Lessons</a>
+                    <a href="#exercises" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Exercises</a>
+                    <a href="#resources" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Resources</a>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative bg-blue-600 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="relative z-10 pb-8 bg-blue-600 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+                    <div class="sm:text-center lg:text-left">
+                        <h1 class="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
+                            <span class="block">Learn Python</span>
+                            <span class="block text-blue-200">From Zero to Hero</span>
+                        </h1>
+                        <p class="mt-3 text-base text-blue-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                            Start your programming journey with our beginner-friendly Python course. Learn at your own pace with interactive lessons and exercises.
+                        </p>
+                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                            <div class="rounded-md shadow">
+                                <a href="#lessons" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-700 bg-white hover:bg-blue-50 md:py-4 md:text-lg md:px-10">
+                                    Start Learning
+                                </a>
+                            </div>
+                            <div class="mt-3 sm:mt-0 sm:ml-3">
+                                <a href="#why-python" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 bg-opacity-60 hover:bg-opacity-70 md:py-4 md:text-lg md:px-10">
+                                    Why Python?
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="http://static.photos/technology/1200x630/42" alt="Python code on screen">
+        </div>
+    </div>
+
+    <!-- Why Python Section -->
+    <div id="why-python" class="py-12 bg-white" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Why Learn Python?</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    The Perfect First Programming Language
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Python is powerful, easy to learn, and used by companies like Google, NASA, and Instagram.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="zap"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Easy to Learn</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Python has simple, English-like syntax that makes it perfect for beginners.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="globe"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Versatile</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Use Python for web development, data science, AI, automation, and more.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-blue-500 text-white">
+                            <i data-feather="briefcase"></i>
+                        </div>
+                        <p class="ml-16 text-lg leading-6 font-medium text-gray-900">In-Demand</p>
+                        <p class="mt-2 ml-16 text-base text-gray-500">
+                            Python developers are among the highest paid and most sought-after professionals.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lessons Section -->
+    <div id="lessons" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Beginner Lessons</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Start Your Python Journey
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Follow our structured curriculum to build your Python skills step by step.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+                    <!-- Lesson 1 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="hash" class="h-6 w-6 text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        <a href="#" class="hover:text-blue-600">1. Python Basics</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Variables, data types, and basic operations
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="code-block">
+                                    <span class="text-green-400"># This is a comment</span><br>
+                                    <span class="text-blue-400">print</span>(<span class="text-yellow-300">"Hello, World!"</span>)<br><br>
+                                    <span class="text-purple-400">x</span> = <span class="text-blue-400">5</span><br>
+                                    <span class="text-purple-400">y</span> = <span class="text-blue-400">"John"</span><br>
+                                    <span class="text-blue-400">print</span>(<span class="text-purple-400">x</span>)<br>
+                                    <span class="text-blue-400">print</span>(<span class="text-purple-400">y</span>)
+                                </div>
+                            </div>
+                            <div class="mt-5 flex justify-end">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Start Lesson
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="repeat" class="h-6 w-6 text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        <a href="#" class="hover:text-blue-600">2. Control Flow</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        If statements, loops, and conditional logic
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="code-block">
+                                    <span class="text-purple-400">x</span> = <span class="text-blue-400">10</span><br>
+                                    <span class="text-blue-400">if</span> <span class="text-purple-400">x</span> > <span class="text-blue-400">5</span>:<br>
+                                    &nbsp;&nbsp;<span class="text-blue-400">print</span>(<span class="text-yellow-300">"x is greater than 5"</span>)<br><br>
+                                    <span class="text-blue-400">for</span> <span class="text-purple-400">i</span> <span class="text-blue-400">in</span> <span class="text-blue-400">range</span>(<span class="text-blue-400">5</span>):<br>
+                                    &nbsp;&nbsp;<span class="text-blue-400">print</span>(<span class="text-purple-400">i</span>)
+                                </div>
+                            </div>
+                            <div class="mt-5 flex justify-end">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Start Lesson
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 3 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="box" class="h-6 w-6 text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        <a href="#" class="hover:text-blue-600">3. Functions</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Creating and using functions in Python
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="code-block">
+                                    <span class="text-blue-400">def</span> <span class="text-yellow-400">greet</span>(<span class="text-purple-400">name</span>):<br>
+                                    &nbsp;&nbsp;<span class="text-blue-400">print</span>(<span class="text-yellow-300">f"Hello, {name}!"</span>)<br><br>
+                                    <span class="text-yellow-400">greet</span>(<span class="text-yellow-300">"Alice"</span>)<br>
+                                    <span class="text-yellow-400">greet</span>(<span class="text-yellow-300">"Bob"</span>)
+                                </div>
+                            </div>
+                            <div class="mt-5 flex justify-end">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Start Lesson
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="px-4 py-5 sm:p-6">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0 bg-blue-500 rounded-md p-3">
+                                    <i data-feather="list" class="h-6 w-6 text-white"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                        <a href="#" class="hover:text-blue-600">4. Data Structures</a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        Lists, tuples, dictionaries, and sets
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <div class="code-block">
+                                    <span class="text-green-400"># List example</span><br>
+                                    <span class="text-purple-400">fruits</span> = [<span class="text-yellow-300">"apple"</span>, <span class="text-yellow-300">"banana"</span>, <span class="text-yellow-300">"cherry"</span>]<br>
+                                    <span class="text-blue-400">print</span>(<span class="text-purple-400">fruits</span>[<span class="text-blue-400">1</span>])<br><br>
+                                    <span class="text-green-400"># Dictionary example</span><br>
+                                    <span class="text-purple-400">person</span> = {<span class="text-yellow-300">"name"</span>: <span class="text-yellow-300">"John"</span>, <span class="text-yellow-300">"age"</span>: <span class="text-blue-400">30</span>}<br>
+                                    <span class="text-blue-400">print</span>(<span class="text-purple-400">person</span>[<span class="text-yellow-300">"name"</span>])
+                                </div>
+                            </div>
+                            <div class="mt-5 flex justify-end">
+                                <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700">
+                                    Start Lesson
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exercises Section -->
+    <div id="exercises" class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Practice Exercises</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Test Your Knowledge
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Apply what you've learned with these hands-on exercises.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="space-y-4">
+                    <!-- Exercise 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                <i data-feather="edit-2" class="h-6 w-6 text-blue-600"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Exercise 1: Hello You</h3>
+                                <div class="mt-2 text-gray-600">
+                                    <p>Write a program that asks the user for their name and then prints "Hello, [name]!"</p>
+                                    <div class="mt-4 bg-white p-4 rounded-md border border-gray-200">
+                                        <p class="font-medium text-gray-700">Example Output:</p>
+                                        <div class="code-block mt-2">
+                                            <span class="text-gray-400">What is your name? </span>Alice<br>
+                                            Hello, Alice!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200">
+                                        Show Solution
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 2 -->
+                    <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                <i data-feather="cpu" class="h-6 w-6 text-blue-600"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Exercise 2: Even or Odd</h3>
+                                <div class="mt-2 text-gray-600">
+                                    <p>Write a program that takes a number as input and prints whether it's even or odd.</p>
+                                    <div class="mt-4 bg-white p-4 rounded-md border border-gray-200">
+                                        <p class="font-medium text-gray-700">Example Output:</p>
+                                        <div class="code-block mt-2">
+                                            <span class="text-gray-400">Enter a number: </span>7<br>
+                                            7 is odd
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200">
+                                        Show Solution
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exercise 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-blue-100 rounded-md p-3">
+                                <i data-feather="plus" class="h-6 w-6 text-blue-600"></i>
+                            </div>
+                            <div class="ml-4 flex-1">
+                                <h3 class="text-lg font-medium text-gray-900">Exercise 3: Sum of Numbers</h3>
+                                <div class="mt-2 text-gray-600">
+                                    <p>Write a function that takes a list of numbers and returns their sum.</p>
+                                    <div class="mt-4 bg-white p-4 rounded-md border border-gray-200">
+                                        <p class="font-medium text-gray-700">Example Output:</p>
+                                        <div class="code-block mt-2">
+                                            >>> sum_list([1, 2, 3, 4, 5])<br>
+                                            15
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-700 bg-blue-100 hover:bg-blue-200">
+                                        Show Solution
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resources Section -->
+    <div id="resources" class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:text-center">
+                <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">Additional Resources</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    Continue Your Learning Journey
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                    Explore these resources to deepen your Python knowledge.
+                </p>
+            </div>
+
+            <div class="mt-10">
+                <div class="grid gap-8 md:grid-cols-3">
+                    <!-- Resource 1 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up">
+                        <div class="p-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="book" class="h-10 w-10 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg font-medium text-gray-900">Official Python Docs</h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        The official Python documentation
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://docs.python.org/3/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-500">
+                                    Visit Site
+                                    <i data-feather="external-link" class="ml-1 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resource 2 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                        <div class="p-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="video" class="h-10 w-10 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg font-medium text-gray-900">Python Tutorials</h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        FreeCodeCamp's Python course
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://www.youtube.com/watch?v=rfscVS0vtbw" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-500">
+                                    Watch Now
+                                    <i data-feather="external-link" class="ml-1 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resource 3 -->
+                    <div class="bg-white overflow-hidden shadow rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                        <div class="p-5">
+                            <div class="flex items-center">
+                                <div class="flex-shrink-0">
+                                    <i data-feather="code" class="h-10 w-10 text-blue-600"></i>
+                                </div>
+                                <div class="ml-5 w-0 flex-1">
+                                    <h3 class="text-lg font-medium text-gray-900">Practice Problems</h3>
+                                    <p class="mt-1 text-sm text-gray-500">
+                                        HackerRank Python challenges
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="mt-6">
+                                <a href="https://www.hackerrank.com/domains/tutorials/10-days-of-python" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-500">
+                                    Start Practicing
+                                    <i data-feather="external-link" class="ml-1 h-4 w-4"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="bg-blue-700">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center">
+            <div class="lg:w-0 lg:flex-1">
+                <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+                    Want more Python content?
+                </h2>
+                <p class="mt-3 max-w-3xl text-lg leading-6 text-blue-200">
+                    Sign up for our newsletter to get new lessons and exercises delivered to your inbox.
+                </p>
+            </div>
+            <div class="mt-8 lg:mt-0 lg:ml-8">
+                <form class="sm:flex">
+                    <label for="email-address" class="sr-only">Email address</label>
+                    <input id="email-address" name="email" type="email" autocomplete="email" required class="w-full px-5 py-3 border border-transparent placeholder-gray-500 focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white focus:border-white sm:max-w-xs rounded-md" placeholder="Enter your email">
+                    <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                        <button type="submit" class="w-full flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-blue-700 focus:ring-white">
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+                <p class="mt-3 text-sm text-blue-200">
+                    We care about your data. Read our <a href="#" class="text-white font-medium underline">Privacy Policy</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-8 xl:col-span-1">
+                    <div class="flex items-center">
+                        <i data-feather="code" class="h-8 w-8 text-blue-500"></i>
+                        <span class="ml-2 text-xl font-bold text-white">PyLearn</span>
+                    </div>
+                    <p class="text-gray-300 text-base">
+                        Making Python accessible to everyone.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-12 grid grid-cols-2 gap-8 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Learn
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Beginner Course
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Intermediate Topics
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Advanced Concepts
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Resources
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Cheat Sheets
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Project Ideas
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Interview Prep
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Company
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        About
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Careers
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase">
+                                Legal
+                            </h3>
+                            <ul class="mt-4 space-y-4">
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Privacy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Terms
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="text-base text-gray-400 hover:text-white">
+                                        Cookie Policy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-8">
+                <p class="text-base text-gray-400 xl:text-center">
+                    &copy; 2023 PyLearn. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
